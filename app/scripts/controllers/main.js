@@ -34,6 +34,8 @@ angular.module('angbappApp')
     //Events from tableviewer
     $scope.$on("ngCRUDComponents#DatatableCtrl#showItem", function (event, object) {
       console.log("SHOW event detected");
+      $scope.showModal = true;
+      $scope.infomsg = "Show completed"
     });
 
     $scope.$on("ngCRUDComponents#DatatableCtrl#updateItem", function (event, object) {

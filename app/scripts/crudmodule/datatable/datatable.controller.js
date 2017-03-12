@@ -13,7 +13,6 @@ angular.module('ngCRUDComponents')
 
       $scope.showModal = false;
       $scope.itemToRemove = null;
-      $scope.modalMsg = "";
 
       $scope.showItem = function(dataObject) {
         $scope.$emit('ngCRUDComponents#DatatableCtrl#showItem', dataObject);
