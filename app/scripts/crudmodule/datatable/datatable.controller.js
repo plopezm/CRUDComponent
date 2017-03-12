@@ -10,12 +10,24 @@
 angular.module('ngCRUDComponents')
   .controller('DatatableCtrl', function ($scope) {
       var vm = this;
+
+      $scope.showModal = false;
+      $scope.itemToRemove = null;
+      $scope.modalMsg = "";
+
       $scope.showItem = function(dataObject) {
         $scope.$emit('ngCRUDComponents#DatatableCtrl#showItem', dataObject);
       }
 
       $scope.updateItem = function(dataObject){
         $scope.$emit('ngCRUDComponents#DatatableCtrl#updateItem', dataObject);
+      }
+
+      $scope.confirmDelete = function(object){
+        $scope.showModal = true;
+        $scope.itemToRemove = object;
+        $scope.modalMsg = JSON.stringify(object);
+
       }
 
       $scope.deleteItem = function(dataObject){
@@ -37,6 +49,5 @@ angular.module('ngCRUDComponents')
         $scope.currentPage--;
         $scope.$emit('ngCRUDComponents#DatatableCtrl#previousPage', $scope.currentPage);
       }
-
 
   });

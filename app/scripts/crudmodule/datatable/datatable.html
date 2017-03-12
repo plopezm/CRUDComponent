@@ -14,7 +14,7 @@
         <td>
           <button class="btn btn-sm glyphicon glyphicon-eye-open" ng-click="showItem(dataObject)"></button>
           <button class="btn btn-sm glyphicon glyphicon-edit" ng-click="updateItem(dataObject)"></button>
-          <button class="btn btn-sm glyphicon glyphicon-remove-circle" ng-click="deleteItem(dataObject)"></button>
+          <button class="btn btn-sm glyphicon glyphicon-remove-circle" ng-click="confirmDelete(dataObject)"></button>
         </td>
         <td ng-repeat="(key, value) in dataObject">{{value}}</td>
       </tr>
@@ -30,3 +30,16 @@
     </div>
   </div>
 </div>
+<modal-window visible="showModal">
+  <div class="container">
+    <p>Are you sure you want to delete the record? </p>
+    <div>
+      {{modalMsg}}
+    </div>
+  </div>
+  <hr/>
+  <div class="form-group text-center">
+    <button class="btn btn-primary" data-dismiss="modal" ng-click="deleteItem(itemToRemove)">Confirm</button>
+    <button class="btn btn-danger" data-dismiss="modal">Cancel</button>
+  </div>
+</modal-window>
