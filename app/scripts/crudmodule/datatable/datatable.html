@@ -20,13 +20,13 @@
       </tr>
     </tbody>
   </table>
-  <div class="">
+  <div ng-if="currentPage != null && maxPage != null">
     <div class="col-lg-2">
       <p class="full_heigth">{{currentPage}} - {{ maxPage }}</p>
     </div>
     <div class="col-lg-10 text-right">
-      <button class="btn btn-sm"><</button>
-      <button class="btn btn-sm">></button>
+      <button class="btn btn-sm" ng-click="previousPage()"><</button>
+      <button class="btn btn-sm" ng-click="nextPage()">></button>
     </div>
   </div>
 </div>
