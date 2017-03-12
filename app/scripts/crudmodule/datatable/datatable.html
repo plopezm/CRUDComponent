@@ -1,4 +1,4 @@
-<h3 class="text-center">{{tabletitle}}</h3>
+<h3 class="text-center" ng-if="tabletitle != null">{{tabletitle}}</h3>
 <div class="table-responsive">
   <table class="table table-striped table-bordered">
     <thead>
@@ -20,4 +20,13 @@
       </tr>
     </tbody>
   </table>
+  <div class="">
+    <div class="col-lg-2">
+      <p class="full_heigth">{{currentPage}} - {{ maxPage }}</p>
+    </div>
+    <div class="col-lg-10 text-right">
+      <button class="btn btn-sm"><</button>
+      <button class="btn btn-sm">></button>
+    </div>
+  </div>
 </div>

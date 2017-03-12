@@ -10,7 +10,6 @@
 angular.module('ngCRUDComponents')
   .controller('DatatableCtrl', function ($scope) {
       var vm = this;
-
       $scope.showItem = function(dataObject) {
         $scope.$emit('ngCRUDComponents#DatatableCtrl#showItem', dataObject);
       }

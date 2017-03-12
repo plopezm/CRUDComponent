@@ -9,6 +9,12 @@ body {
   padding: 0;
 }
 
+
+.full_heigth{
+  height: 100%;
+  margin:auto;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,

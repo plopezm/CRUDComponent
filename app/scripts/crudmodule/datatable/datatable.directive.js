@@ -15,7 +15,9 @@ angular.module("ngCRUDComponents")
       scope:{
         tabletitle: '@',
         tablecolumns: '=',
-        tabledata: '='
+        tabledata: '=',
+        currentPage: '=',
+        maxPage: '='
       },
     };
 });
