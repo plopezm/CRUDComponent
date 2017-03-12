@@ -31,11 +31,20 @@
   </div>
 </div>
 <modal-window visible="showModal">
-  <div class="container">
-    <p>Are you sure you want to delete the record? </p>
-    <div>
-      {{modalMsg}}
-    </div>
+  <p>Are you sure you want to delete the record? </p>
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered">
+      <thead>
+      <tr>
+        <th ng-repeat="columnName in tablecolumns track by $index">{{columnName}}</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td ng-repeat="(key, value) in itemToRemove">{{value}}</td>
+      </tr>
+      </tbody>
+    </table>
   </div>
   <hr/>
   <div class="form-group text-center">
