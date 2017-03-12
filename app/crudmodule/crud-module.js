@@ -6,7 +6,7 @@ angular
   ])
   .constant('CRUD_CONSTANTS', (function () {
     return {
-      DATATABLE_BASE_TEMPLATE_URL: '/scripts/crudmodule/datatable',
-      MODAL_BASE_TEMPLATE_URL: '/scripts/crudmodule/modal',
+      DATATABLE_BASE_TEMPLATE_URL: '/crudmodule/datatable',
+      MODAL_BASE_TEMPLATE_URL: '/crudmodule/modal',
     }
   })());
