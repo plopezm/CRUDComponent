@@ -9,7 +9,7 @@
 angular.module('ngCRUDComponents')
   .directive('modalWindow', function (CRUD_CONSTANTS) {
     return {
-      templateUrl: CRUD_CONSTANTS.MODAL_BASE_TEMPLATE_URL+"/modalwindow.html",
+      templateUrl: CRUD_CONSTANTS.BASE_DIR+"/modal/modalwindow.html",
       restrict: 'E',
       transclude: true,
       replace:true,

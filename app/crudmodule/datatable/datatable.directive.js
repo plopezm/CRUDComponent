@@ -9,7 +9,7 @@
 angular.module("ngCRUDComponents")
   .directive('crudDatatable', function(CRUD_CONSTANTS) {
     return {
-      templateUrl: CRUD_CONSTANTS.DATATABLE_BASE_TEMPLATE_URL+"/datatable.html",
+      templateUrl: CRUD_CONSTANTS.BASE_DIR+"/datatable/datatable.html",
       restrict: 'E',
       controller: 'DatatableCtrl',
       scope:{
